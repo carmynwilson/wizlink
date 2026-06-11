@@ -13,6 +13,11 @@ changing a line of text on GitHub. Every change auto-deploys.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/carmynwilson/wizlink)
 
+> **Recommended: make your own copy private.** There are no secrets in this repo — but
+> your copy holds your full list of links and where each one points, and that list is
+> yours. Keeping your repo private keeps it from being publicly browsable. Everything
+> works exactly the same either way; Cloudflare deploys a private repo without any issue.
+
 ---
 
 ## Why wizlink?
@@ -58,13 +63,16 @@ There are three ways to set this up, easiest first.
 2. Cloudflare walks you through cloning this repo into *your* GitHub account and
    deploying the Worker. It also wires up auto-deploy, so future edits to your copy of
    `links.json` go live automatically.
+   *(Recommended: once it's created, set your new repo to **Private** in its GitHub
+   Settings → General → Change visibility. It keeps deploying just the same.)*
 3. When it finishes, you'll get a free `https://<name>.<your-subdomain>.workers.dev` URL.
    Test it: visit `…workers.dev/hello` and you should be redirected.
 4. Edit `links.json` in your new repo, then [add your own domain](#add-your-own-domain).
 
 ### Option B — Use this template, connect by hand
 
-1. Click **Use this template → Create a new repository** at the top of this page.
+1. Click **Use this template → Create a new repository** at the top of this page. When
+   GitHub asks, choose **Private** (recommended) so your link list stays your own.
 2. In the [Cloudflare dashboard](https://dash.cloudflare.com/): **Workers & Pages →
    Create → Workers → Connect to Git**, and pick your new repo.
 3. Set the build to run `npx wrangler deploy` (Cloudflare usually detects this
@@ -160,9 +168,10 @@ your previous working version keeps serving. So no — fix it and commit again.
 Cloudflare's free Workers tier covers a lot of redirects. Heavy traffic may need a paid
 plan, but most personal and organization use stays free. You do need to own a domain.
 
-**Is my data private?**
-The only thing in this repo is your list of slugs and destination URLs. There are no
-secrets, API keys, or visitor data stored here — which is why it's safe to keep public.
+**Should my repo be public or private?**
+Either works — there are no secrets, API keys, or visitor data stored in it, just your
+list of slugs and destination URLs. We recommend **private**, so that link list isn't
+publicly browsable. Cloudflare deploys a private repo without any issue.
 
 ---
 
