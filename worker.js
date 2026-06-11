@@ -3,7 +3,7 @@
  * ----------------------------------------------------------------------
  * Point a domain at this Worker and `yourdomain.com/<slug>` instantly teleports
  * the visitor to a full URL — a real 302 redirect resolved at Cloudflare's edge in
- * a few milliseconds. No interstitial, no third-party hop, no database.
+ * a few milliseconds. No "please wait" page, no third-party hop, no database.
  *
  * You almost never edit THIS file. Your links live in `links.json` — that's the
  * spellbook. This file is just the magic that reads it.
