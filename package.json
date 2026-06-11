@@ -1,0 +1,19 @@
+{
+  "name": "wizlink",
+  "version": "1.0.0",
+  "description": "A tiny, fast link shortener you run on your own domain with a Cloudflare Worker.",
+  "license": "MIT",
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "url-shortener",
+    "link-shortener",
+    "shortlinks",
+    "redirect",
+    "edge"
+  ],
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  }
+}

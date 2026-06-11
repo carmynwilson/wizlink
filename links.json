@@ -1,0 +1,5 @@
+{
+  "hello": "https://workers.cloudflare.com/",
+  "docs": "https://developers.cloudflare.com/workers/",
+  "source": "https://github.com/carmynwilson/wizlink"
+}

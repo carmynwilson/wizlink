@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Wrangler / Cloudflare build artifacts
+.wrangler/
+dist/
+
+# Local secrets (never commit these)
+.dev.vars
+.env
+
+# OS / editor cruft
+.DS_Store
+*.log

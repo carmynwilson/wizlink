@@ -1,0 +1,15 @@
+# Rename this to something unique inside your own Cloudflare account.
+name = "wizlink"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+
+# `workers_dev = true` gives you a free https://<name>.<your-subdomain>.workers.dev
+# URL so you can test immediately, before you own a domain. Once you've attached your
+# own custom domain (see the README), you can set this to false to turn the .workers.dev
+# URL off.
+workers_dev = true
+
+# Note: there is intentionally no `routes` block here. Attach your domain to this Worker
+# as a *Custom Domain* in the Cloudflare dashboard (Workers & Pages -> your worker ->
+# Settings -> Domains & Routes). A Custom Domain persists across deploys, so pushing a
+# new commit just updates the script — your domain stays bound.
