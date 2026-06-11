@@ -11,7 +11,7 @@ third-party shortener, no database, no monthly fee.
 Your links live in one plain file — `links.json` — so editing them is as easy as
 changing a line of text on GitHub. Every change auto-deploys.
 
-[![Deploy via Cloudflare](https://img.shields.io/badge/Deploy_via_Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://deploy.workers.cloudflare.com/?url=https://github.com/carmynwilson/wizlink)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/carmynwilson/wizlink)
 
 > **Recommended: make your own copy private.** There are no secrets in this repo — but
 > your copy holds your full list of links and where each one points, and that list is
@@ -59,7 +59,7 @@ There are three ways to set this up, easiest first.
 
 ### Option A — One-click deploy (fastest)
 
-1. Click the **Deploy via Cloudflare** button above.
+1. Click the **Deploy to Cloudflare** button above.
 2. Cloudflare walks you through cloning this repo into *your* GitHub account and
    deploying the Worker. It also wires up auto-deploy, so future edits to your copy of
    `links.json` go live automatically.
