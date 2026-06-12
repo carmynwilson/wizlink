@@ -13,10 +13,10 @@ changing a line of text on GitHub. Every change auto-deploys.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/carmynwilson/wizlink)
 
-> **Recommended: make your own copy private.** There are no secrets in this repo — but
+> **Recommended: make your own copy private.** There are no secrets in this repo, but
 > your copy holds your full list of links and where each one points, and that list is
 > yours. Keeping your repo private keeps it from being publicly browsable. Everything
-> works exactly the same either way; Cloudflare deploys a private repo without any issue.
+> works exactly the same either way. Cloudflare deploys a private repo without any issue.
 
 ---
 
