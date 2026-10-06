@@ -9,7 +9,22 @@ compatibility_date = "2026-06-01"
 # URL off.
 workers_dev = true
 
+# Preview URLs give each uploaded version its own extra workers.dev address. A link
+# shortener has no use for them, so they stay off.
+preview_urls = false
+
 # Note: there is intentionally no `routes` block here. Attach your domain to this Worker
 # as a *Custom Domain* in the Cloudflare dashboard (Workers & Pages -> your worker ->
 # Settings -> Domains & Routes). A Custom Domain persists across deploys, so pushing a
-# new commit just updates the script — your domain stays bound.
+# new commit just updates the script, and your domain stays bound.
+
+# Before every deploy (and every `wrangler dev`), check links.json for mistakes. If the
+# check fails, the deploy stops and your live links stay exactly as they were.
+[build]
+command = "node scripts/check-links.mjs"
+
+[vars]
+# Set to "true" to copy the visitor's query string onto the destination, so
+# yourdomain.com/flyer?utm_medium=poster arrives with utm_medium=poster. A parameter
+# in the visitor's link replaces one of the same name in links.json.
+PASS_QUERY = "false"

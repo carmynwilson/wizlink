@@ -1,8 +1,9 @@
 {
   "name": "wizlink",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A tiny, fast link shortener you run on your own domain with a Cloudflare Worker.",
   "license": "MIT",
+  "private": true,
   "keywords": [
     "cloudflare",
     "workers",
@@ -13,7 +14,11 @@
     "edge"
   ],
   "scripts": {
+    "check": "node scripts/check-links.mjs",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.147.0"
   }
 }
