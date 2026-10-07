@@ -203,5 +203,8 @@ publicly browsable. Cloudflare deploys a private repo without any issue.
 ---
 
 ## License
+MIT License - See [LICENSE](LICENSE)
 
-MIT. See [LICENSE](LICENSE). Use it, fork it, ship it.
+Copyright (c) 2026 Carmyn Wilson
+
+Fork it and ship it. :)
