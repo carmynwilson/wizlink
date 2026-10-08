@@ -167,14 +167,14 @@ to your destination URLs in `links.json`. Your existing site analytics (Google
 Analytics, Plausible, etc.) will then attribute the visits. Want per-slug counters at
 the edge instead? Cloudflare Workers KV or Analytics Engine can be added later.
 
-### Optional: pass the visitor's query string through
+### One slug, many placements
 
-By default, anything after a `?` in a short link is dropped. Set `PASS_QUERY = "true"`
-in `wrangler.toml` and wizlink copies it onto the destination instead. Then one slug can
-serve several placements: print `yourdomain.com/flyer?utm_medium=poster` on the poster
-and `yourdomain.com/flyer?utm_medium=postcard` on the postcard, and your analytics can
-tell them apart. A parameter in the visitor's link replaces one of the same name in
-`links.json`.
+Anything after a `?` in a short link is copied onto the destination. That means one slug
+can serve several placements: print `yourdomain.com/flyer?utm_medium=poster` on the
+poster and `yourdomain.com/flyer?utm_medium=postcard` on the postcard, and your analytics
+can tell them apart. A parameter in the visitor's link replaces one of the same name in
+`links.json`. To drop query strings instead, set `PASS_QUERY = "false"` in
+`wrangler.toml`.
 
 ---
 

@@ -24,7 +24,8 @@ preview_urls = false
 command = "node scripts/check-links.mjs"
 
 [vars]
-# Set to "true" to copy the visitor's query string onto the destination, so
+# The visitor's query string is copied onto the destination, so
 # yourdomain.com/flyer?utm_medium=poster arrives with utm_medium=poster. A parameter
 # in the visitor's link replaces one of the same name in links.json.
-PASS_QUERY = "false"
+# Set to "false" to drop query strings instead.
+PASS_QUERY = "true"
